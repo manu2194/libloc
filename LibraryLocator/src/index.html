@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Library Project</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="css/animate.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.7/fullpage.min.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- Leaflet -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+    crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+    integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+    crossorigin=""></script>
+</head>
+
+<body>
+  <div id="fullPage">
+    <div class="section s1">
+      <div class="middle">
+        <div class="sm-container">
+          <i class="show-btn fas fa-book"></i>
+          <div class="sm-menu">
+            <a href="https://github.com/zainmannan/zainmannan.github.io/tree/master/LibraryLocator" target="_blank"><i
+                class="fab fa-github"></i></a>
+            <a href="mailto:zmannan1@terpmail.umd.edu"><i class="far fa-envelope" target="_blank"></i></a>
+          </div>
+        </div>
+      </div>
+      <h1 class="title">
+        Locate Your Library
+      </h1>
+    </div>
+
+    <div class="section s2">
+      <h2>Libraries Near You</h2>
+      <div id="map"></div>
+      <script src="./js/main.js"></script>
+      <center>
+        <p id="demo" style="display: none">
+          To use our application, you will first need to allow your browser to
+          know your loaction. After turning location services on, you will
+          need to find your position by finding the pinpoint labeled "You are
+          here". There is a 2 mile radius surrounding your location to show
+          you the libraries that are currently near you. You can click on the
+          other pinpoints on the map, which represent libraries near you, to
+          see the name, address, phone number, and services offered by that
+          library.
+        </p>
+        <div class="button" onclick="toggleText();removeButton()" id="button">Click Here to View Documentation</div>
+      </center>
+    </div>
+
+    <div class="section s3 wow fadeIn">
+      <h2>Our Purpose</h2>
+      <center>
+        <p>
+          This website was created to help residents of Prince George's
+          County, which includes parents, teens, college students, and others,
+          find a library near them. Our goal is to solve the problem that
+          these people face, which is a lack of computer access or reliable
+          internet access at home. We created an interactive map that
+          pinpoints different libraries in the county based on the location of
+          the user and the location of possible destinations. We also included
+          services that each library offers to help people figure out which
+          library suits their needs. Contact information as well as library
+          address has also been provided to help people contact and locate
+          libraries of choice.
+          <br />
+          <br />
+        </p>
+        <p>
+          <a href="https://forms.gle/REK5bMjEqLZTNs2r6" target="_blank">Let us hear your feedback!</a>
+        </p>
+      </center>
+    </div>
+
+    <div class="section s4">
+      <h2>Our Team</h2>
+      <ul class="cards">
+        <li class="cards__item">
+          <div class="card" id="z">
+            <div class="card__image zain"></div>
+            <div class="card__content">
+              <center>
+                <div class="card__title">Zain Mannan</div>
+                <p class="card__text">Web Developer</p>
+                <p class="card__text">
+                  Responsible for the HTML, CSS, and JavaScript that are<br />the
+                  building blocks of the website.
+                </p>
+              </center>
+            </div>
+          </div>
+        </li>
+        <li class="cards__item">
+          <div class="card" id="a">
+            <div class="card__image amber"></div>
+            <div class="card__content">
+              <center>
+                <div class="card__title">Amber Dietrich</div>
+                <p class="card__text">Research Lead</p>
+                <p class="card__text">
+                  Led the initiative on which problem to solve with the API<br />she
+                  chose.
+                </p>
+              </center>
+            </div>
+          </div>
+        </li>
+        <li class="cards__item">
+          <div class="card" id="o">
+            <div class="card__image osi"></div>
+            <div class="card__content">
+              <center>
+                <div class="card__title">Osi Sunday</div>
+                <p class="card__text">Project Manager</p>
+                <p class="card__text">
+                  Assigned tasks and held group members accountable.<br />Also
+                  helped with the creation of the map.
+                </p>
+              </center>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <br />
+      <ul class="cards">
+        <li class="cards__item">
+          <div class="card" id="m">
+            <div class="card__image mike"></div>
+            <div class="card__content">
+              <center>
+                <div class="card__title">Mike Fenn</div>
+                <p class="card__text">JavaScript Lead</p>
+                <p class="card__text">
+                  Responsible for the implementation of the visualization<br>as well as the information presented on it.
+                </p>
+              </center>
+            </div>
+          </div>
+        </li>
+        <li class="cards__item">
+          <div class="card" id="j">
+            <div class="card__image jose"></div>
+            <div class="card__content">
+              <center>
+                <div class="card__title">Jose Martinez</div>
+                <p class="card__text">Server Manager</p>
+                <p class="card__text">
+                  Fetched data from the API & created a functional server<br>on which the site is hosted.
+                </p>
+              </center>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.7/fullpage.min.js"></script>
+  <script src="js/wow.min.js"></script>
+  <script>
+    new WOW().init();
+  </script>
+
+  <script>
+    document.getElementById("z").onclick = function () {
+      zainGit();
+    };
+
+    function zainGit() {
+      window.open("https://github.com/zainmannan");
+    }
+    document.getElementById("o").onclick = function () {
+      osiGit();
+    };
+
+    function osiGit() {
+      window.open("https://github.com/osisunday97");
+    }
+    document.getElementById("a").onclick = function () {
+      amberGit();
+    };
+
+    function amberGit() {
+      window.open("https://github.com/andietrich97");
+    }
+    document.getElementById("j").onclick = function () {
+      joseGit();
+    };
+
+    function joseGit() {
+      window.open("https://github.com/jwmartinez1");
+    }
+    document.getElementById("m").onclick = function () {
+      mikeGit();
+    };
+
+    function mikeGit() {
+      window.open("https://github.com/mfenn1");
+    }
+    new fullpage("#fullPage", {
+      scrollBar: true,
+      autoScrolling: true,
+      keyboardScrolling: true,
+      navigation: true,
+      fitToSection: false,
+      navigationPosition: "left",
+      navigationTooltips: ["HOME", "VIZ", "ABOUT", "TEAM"],
+      fixedElements: ".middle"
+    });
+    $(".show-btn").click(function () {
+      $(".sm-menu").fadeToggle("fast");
+    });
+    var para = document.querySelectorAll(".ellipsis");
+    for (var i = 0; i < para.length; i++) {
+      var paraTxt = para[i].innerHTML;
+      if (paraTxt.length > 200) {
+        var newPara = document.createElement("p"); //create new paragraph element
+        newPara.className = "ellipsis-trunc";
+        var newParaTxt = document.createTextNode(
+          paraTxt.substring(0, 200) + "..."
+        );
+        //create new text node
+        newPara.appendChild(newParaTxt); //bind new text node to new element
+        para[i].replaceWith(newPara);
+      } else {
+        console.log("I've got nothing");
+      }
+    }
+
+    function toggleText() {
+      var text = document.getElementById("demo");
+      if (text.style.display === "none") {
+        text.style.display = "block";
+      } else {
+        text.style.display = "none";
+      }
+    }
+
+    function removeButton() {
+      var button = document.getElementById("button");
+      button.style.display = "none";
+    }
+
+    $(function () {
+      $(".btn-6")
+        .on("mouseenter", function (e) {
+          var parentOffset = $(this).offset(),
+            relX = e.pageX - parentOffset.left,
+            relY = e.pageY - parentOffset.top;
+          $(this)
+            .find("span")
+            .css({
+              top: relY,
+              left: relX
+            });
+        })
+        .on("mouseout", function (e) {
+          var parentOffset = $(this).offset(),
+            relX = e.pageX - parentOffset.left,
+            relY = e.pageY - parentOffset.top;
+          $(this)
+            .find("span")
+            .css({
+              top: relY,
+              left: relX
+            });
+        });
+      $("[href=#]").click(function () {
+        return false;
+      });
+    });
+  </script>
+</body>
+
+</html>

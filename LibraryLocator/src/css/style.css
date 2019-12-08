@@ -98,7 +98,7 @@ html {
   left: 50%;
   transform: translate(-50%, -50%);
   margin: 0;
-  background: url(images/library.jpg) 50% 120%;
+  background: url(../static/library.jpg) 50% 120%;
   background-size: cover;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
@@ -260,7 +260,7 @@ img {
 }
 
 .osi {
-  background-image: url(images/osi.jpg);
+  background-image: url(../static/osi.jpg);
 }
 
 #o {
@@ -268,7 +268,7 @@ img {
 }
 
 .zain {
-  background-image: url(images/zain.jpg);
+  background-image: url(../static/zain.jpg);
 }
 
 #z {
@@ -276,7 +276,7 @@ img {
 }
 
 .amber {
-  background-image: url(images/amber.jpg);
+  background-image: url(../static/amber.jpg);
 }
 
 #a {
@@ -284,7 +284,7 @@ img {
 }
 
 .mike {
-  background-image: url(images/mike.jpg);
+  background-image: url(../static/mike.jpg);
 }
 
 #m {
@@ -296,7 +296,7 @@ img {
 } */
 
 .jose {
-  background-image: url(images/jose1.jpg);
+  background-image: url(../static/jose1.jpg);
 }
 
 #j {
